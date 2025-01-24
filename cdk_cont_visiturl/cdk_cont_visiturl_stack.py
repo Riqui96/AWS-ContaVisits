@@ -32,6 +32,7 @@ class CdkContVisiturlStack(Stack):
         hello_resource = api.root.add_resource("hello")
         hello_resource.add_method("GET")
 
+        # Especificamos HitCounter
         hello_with_counter = HitCounter(
             self, 'HelloHitCounter',
             downstream=my_lambda,
